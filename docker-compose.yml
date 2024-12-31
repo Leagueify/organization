@@ -1,0 +1,12 @@
+services:
+  leagueify-organization:
+    image: leagueify-organization-dev
+    build:
+      context: .
+      target: dev
+    command: air
+    ports:
+      - 6502:6502
+    volumes:
+      - ./:/app
+    restart: always
