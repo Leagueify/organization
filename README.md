@@ -1,7 +1,7 @@
 # Organization Service
 
-The Leagueify organization service is responsible for managing user authentication,
-authorization, and profiles. The Leagueify organization service uses 
+The Leagueify organization service is responsible for managing organizations
+that may oversee multiple leagues. The Leagueify organization service uses 
 [Go][go-download] using version `1.23.0`.
 
 ## Key Functions
@@ -35,7 +35,9 @@ make clean
 ```
 
 The Leagueify organization service is ready for development once the banner output is
-visible within the terminal. The banner blelow was created using the
+visible within the terminal. By default the Leagueify organization service api
+docs are accessible at [http://localhost:6502/organization/docs][service-url].
+The banner below was created using the
 [Text to ASCII Art Generator by Patorjk][patorjk-taag].
 
 ```
@@ -59,3 +61,4 @@ leagueify-organization-1  |
 [go-download]: https://go.dev/dl/
 [patorjk-taag]: https://patorjk.com/software/taag/#p=display&f=Kban&t=LEAGUEIFY%0AORGANIZATION
 [repo-makefile]: ./Makefile
+[service-url]: http://localhost:6502/organization/docs
