@@ -4,8 +4,6 @@ import (
 	"embed"
 	"net/http"
 
-	"github.com/leagueify/organization/internal/config"
-
 	"github.com/labstack/echo/v4"
 )
 
@@ -17,7 +15,6 @@ var (
 
 type httpHandler struct {
 	app *echo.Echo
-	cfg *config.Config
 }
 
 func (h *httpHandler) Initialize() {
@@ -27,10 +24,9 @@ func (h *httpHandler) Initialize() {
 	group.GET("/healthz", healthz)
 }
 
-func HTTP(app *echo.Echo, cfg *config.Config) Handler {
+func HTTP(app *echo.Echo) Handler {
 	return &httpHandler{
 		app: app,
-		cfg: cfg,
 	}
 }
 

@@ -52,7 +52,7 @@ func (s *echoServer) Start() {
 	s.app.Use(middleware.Recover())
 
 	// register http handler
-	handler.HTTP(s.app, s.cfg).Initialize()
+	handler.HTTP(s.app).Initialize()
 
 	showStartBanner()
 
